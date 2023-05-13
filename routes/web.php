@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //FETCH ALL USERS
+        //$users = DB::select("select * from users where email=?",['ishanmadhawa44@gmail.com']);
+    //INSERT USER
+        //$users = DB::insert('insert into users (name,email,password) values (?, ?,?)', ['Sansala', 'sansala@gmail.com','$2y$10$6/DdgUI4E7te2w6RngKMJuvBp34znXM8KzB3htu9AKkamxUXI9u22']);
+    //UPDATE
+        //$users = DB::update("update users set name = 'sansala' where id = 2");
+    //DELETE
+        //$users = DB::delete("delete from users where id =2");
+    dd($users);
+    //return view('welcome');
 });
 
 Route::get('/dashboard', function () {
