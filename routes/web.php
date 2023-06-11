@@ -23,8 +23,8 @@ Route::get('/', function () {
         //$users = DB::update("update users set name = 'sansala' where id = 2");
     //DELETE
         //$users = DB::delete("delete from users where id =2");
-    dd($users);
-    //return view('welcome');
+    //dd($users);
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
